@@ -5,9 +5,9 @@ class Employee(Person):
     """Employee model."""
 
     DEPARTMENT_CHOICES = [
-        ('Architeture', 'Architeture'),
-        ('E-commerce', 'E-commerce'),
-        ('Mobile', 'Mobile'),
+        ('A', 'Architeture'),
+        ('E', 'E-commerce'),
+        ('M', 'Mobile'),
     ]
 
     department = models.CharField(max_length=25, choices=DEPARTMENT_CHOICES)
