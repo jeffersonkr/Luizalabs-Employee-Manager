@@ -4,7 +4,7 @@ class Person(models.Model):
     """Abstract class, represents a person."""
     
     name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
 
     class Meta:
         abstract = True
