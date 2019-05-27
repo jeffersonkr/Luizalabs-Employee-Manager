@@ -19,6 +19,8 @@ class GetAllEmployees(TestCase):
     def setUp(self):
         Employee.objects.create(
             name='Casper', email='casper@gmail.com', department='E')
+        Employee.objects.create(
+            name='Joseph', email='joseph@gmail.com', department='M')
 
     def test_get_all_employees(self):
         client = Client()
