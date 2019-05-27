@@ -14,3 +14,7 @@
     max-width: 100%!important;
     width:auto!important;
 }
+
+.module caption, .inline-group h2{
+    border-radius: 10px;
+}
