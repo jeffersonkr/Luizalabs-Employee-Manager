@@ -7,14 +7,8 @@ python:
 before_install:
   - sudo apt-get -qq update
   
-env:
-  - DJANGO_VERSION=2.2.1
-  
 install:
   - pip install -r requirements.txt
 # command to run tests
 script:
   - pytest
-
-virtualenv:
-  system_site_packages: true
