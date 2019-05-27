@@ -1,10 +1,10 @@
-dist: xenial
-python:
-  - "3.5"
-  - "3.6"
-  - "3.7"
-env:
-  - DJANGO=2.2 DB=sqlite
+templates:
+  py37: &py37
+  python: 3.7
+  dist: xenial
+  sudo: required
+
+  django2-0: &django2-0 DJANGO=2.0
 # command to install dependencies
 install:
   - pip install -r requirements.txt
