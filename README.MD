@@ -33,5 +33,6 @@ Considering python3 and pip is already installed, we should use these bellow ste
 
 ### Using API with curl:
  - Open shell and type bellow command
- - `curl -H "Content-Type: application/javascript" http://localhost:8000/employee/`
+ - `curl -X <method type> -H "Content-Type: application/javascript" http://localhost:8000/employee/`
+    - example : `curl -X DELETE -H "Content-Type: application/javascript" http://localhost:8000/employee/1/ `
  - or directly access url in browser.
