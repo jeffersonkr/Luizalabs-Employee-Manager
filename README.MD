@@ -30,9 +30,18 @@ Considering python3 and pip is already installed, we should use these bellow ste
  - Add employee ` POST : /employee/ `
  - Delete employee ` DELETE : /employee/<id> `
  - Update employee ` PUT : /employee/<id> `
+ - Get Access Token ` GET : /api/token/ `
+ - Refresh Access Token ` GET : /api/token/refresh/ `
 
 ### Using API with curl:
- - Open shell and type bellow command
- - `curl -X <method type> -H "Content-Type: application/javascript" http://localhost:8000/employee/`
-    - example : `curl -X DELETE -H "Content-Type: application/javascript" http://localhost:8000/employee/1/ `
- - or directly access url in browser.
+For Delete and PUT methods you should have a token.<br>
+ - department tags `E: E-commerce`, `M : Mobile`, `A: Architeture`.
+
+ - getting a token : `curl -X POST -d "username=<username>&password=<password>" http://localhost:8000/api/token/`
+ - refreshing a token: `curl -X POST -H "Content-Type: application/json" -d '{"refresh":<access-token>"}' http://localhost:8000/api/token/refresh/`
+ - get all employees: `curl -X GET -H "Content-Type: application/javascript" http://localhost:8000/employee/`
+ - get an employee : `curl -X GET -H "Content-Type: application/javascript" http://localhost:8000/employee/<id-employee>/ `
+ - create employee : `curl -X POST http://localhost:8000/employee/ -H "Content-Type: application/json" -d '{"name": "<name>", "email": "<email>", "department": "<department tag>"}' `
+ - delete an employee : `curl -X DELETE "Authorization: Bearer <access-token>" -H "Content-Type: application/javascript" http://localhost:8000/employee/<id-employee>/ `
+ - update an employee : `curl -X PUT -H "Authorization: Bearer <access-token>" http://localhost:8000/employee/<id-employee>/ -H "Content-Type: application/json"  -d '{"name": "<name>", "email": "<email>", "department": "<department-tag>"}' `
+
