@@ -1,5 +1,7 @@
-## Python Django project for management of Luiza Labs's employees.
------------------------------------------------------------------
+[![Build Status](https://travis-ci.com/jeffersonkr/Luizalabs-Employee-Manager.svg?branch=master)](https://travis-ci.com/jeffersonkr/Luizalabs-Employee-Manager)
+
+Python Django project for management of Luiza Labs's employees.
+==================================================================
 
 ### The Problem:
 Luizalabs' team is growing every month and now we need to have some application to manage
