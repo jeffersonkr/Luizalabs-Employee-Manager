@@ -12,11 +12,15 @@ class EmployeeList(APIView):
     '''List all employees, or create a new employee.'''
 
     def get(self, request, format=None):
+        """List all employees"""
+
         employees = Employee.objects.all()
         serializer = EmployeeSerializer(employees, many=True)
         return Response(serializer.data)
 
     def post(self, request, format=None):
+        """Create a new employee"""
+
         serializer = EmployeeSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
