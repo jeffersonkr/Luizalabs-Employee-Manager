@@ -1,4 +1,3 @@
-import json
 from rest_framework import status
 from django.urls import reverse, resolve
 from django.test import TestCase, Client
