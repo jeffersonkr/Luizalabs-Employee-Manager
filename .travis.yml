@@ -5,7 +5,13 @@ templates:
   sudo: required
 
   django2-0: &django2-0 DJANGO=2.0
-# command to install dependencies
+
+
+before_install:
+    - sudo apt-get -qq update
+env:
+  - DJANGO_VERSION=2.2.1
+  
 install:
   - pip install -r requirements.txt
 # command to run tests
