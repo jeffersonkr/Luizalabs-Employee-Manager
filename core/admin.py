@@ -33,15 +33,20 @@ class EmployeeAdmin(admin.ModelAdmin):
     ]
 
     def change_department_to_mobile(self, request, queryset):
+        """Change selected employees department to mobile"""
+
         queryset.update(department='M')
         self.message_user(request, "Successfully department changed.")
 
     def change_department_to_architeture(self, request, queryset):
+        """Change selected employees department to architeture"""
+
         queryset.update(department='A')
         self.message_user(request, "Successfully department changed.")
 
-
     def change_department_to_ecommerce(self, request, queryset):
+        """Change selected employees department to ecommerce"""
+
         queryset.update(department='E')
         self.message_user(request, "Successfully department changed.")
 
@@ -49,10 +54,12 @@ class EmployeeAdmin(admin.ModelAdmin):
     change_department_to_architeture.short_description = "Change selected employees department to architeture"
     change_department_to_ecommerce.short_description = "Change selected employees department to e-commerce"
 
-admin.site.site_header = "Employees Management"
+admin.site.site_header = "Luiza Labs Employee Management"
 admin.site.site_url = None
 admin.site.index_title = "Luiza Labs"
 admin.site.site_title = "Employees"
 admin.site.login_template = "admin/login_changed.html"
+admin.site.index_template = "admin/index_changed.html"
 admin.site.register(Employee, EmployeeAdmin)
 admin.site.add_action(export_as_json, 'Export selected json')
+
