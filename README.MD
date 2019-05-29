@@ -17,12 +17,14 @@ Considering python3 and pip is already installed, we should use these bellow ste
  - go to project directory
  - pip install -r requirements.txt
  - python manage.py createsuperuser
-    - Here we will make an user to access administration site.
+    - Here we will make an user to access administration site. (already created)
+    - Login: admin
+    - Password: admin
  - python manage.py runserver
 
 ### Using admin site on local machine:
  - Open an browser and go to http://localhost:8000.
- - Insert login and password registered on instalation guide.
+ - Insert login and password registered on instalation guide (admin/admin).
 
 ### API End-Points:
  - Get all employees ` GET : /employee/ `
@@ -37,11 +39,18 @@ Considering python3 and pip is already installed, we should use these bellow ste
 For Delete and PUT methods you should have a token.<br>
  - department tags `E: E-commerce`, `M : Mobile`, `A: Architeture`.
 
- - getting a token : `curl -X POST -d "username=<username>&password=<password>" http://localhost:8000/api/token/`
- - refreshing a token: `curl -X POST -H "Content-Type: application/json" -d '{"refresh":"<access-token>"}' http://localhost:8000/api/token/refresh/`
- - get all employees: `curl -X GET -H "Content-Type: application/javascript" http://localhost:8000/employee/`
- - get an employee : `curl -X GET -H "Content-Type: application/javascript" http://localhost:8000/employee/<id-employee>/ `
- - create employee : `curl -X POST http://localhost:8000/employee/ -H "Content-Type: application/json" -d '{"name": "<name>", "email": "<email>", "department": "<department tag>"}' `
- - delete an employee : `curl -X DELETE -H "Authorization: Bearer <access-token>" -H "Content-Type: application/javascript" http://localhost:8000/employee/<id-employee>/ `
- - update an employee : `curl -X PUT -H "Authorization: Bearer <access-token>" http://localhost:8000/employee/<id-employee>/ -H "Content-Type: application/json"  -d '{"name": "<name>", "email": "<email>", "department": "<department-tag>"}' `
+ - getting a token : 
+    - `curl -X POST -d "username=<username>&password=<password>" http://localhost:8000/api/token/`
+ - refreshing a token: 
+    - `curl -X POST -H "Content-Type: application/json" -d '{"refresh":"<access-token>"}' http://localhost:8000/api/token/refresh/`
+ - get all employees: 
+    - `curl -X GET -H "Content-Type: application/javascript" http://localhost:8000/employee/`
+ - get an employee : 
+    - `curl -X GET -H "Content-Type: application/javascript" http://localhost:8000/employee/<id-employee>/ `
+ - create employee : 
+    - `curl -X POST http://localhost:8000/employee/ -H "Content-Type: application/json" -d '{"name": "<name>", "email": "<email>", "department": "<department tag>"}' `
+ - delete an employee : 
+    - `curl -X DELETE -H "Authorization: Bearer <access-token>" -H "Content-Type: application/javascript" http://localhost:8000/employee/<id-employee>/ `
+ - update an employee : 
+    - `curl -X PUT -H "Authorization: Bearer <access-token>" http://localhost:8000/employee/<id-employee>/ -H "Content-Type: application/json"  -d '{"name": "<name>", "email": "<email>", "department": "<department-tag>"}' `
 
