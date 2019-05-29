@@ -35,6 +35,8 @@ Considering python3 and pip is already installed, we should use these bellow ste
  - Get Access Token ` GET : /api/token/ `
  - Refresh Access Token ` GET : /api/token/refresh/ `
 
+ example: `http://localhost:8000/employee/`
+
 ### Using API with curl:
 For Delete and PUT methods you should have a token.<br>
  - department tags `E: E-commerce`, `M : Mobile`, `A: Architeture`.
