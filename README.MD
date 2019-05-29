@@ -26,10 +26,10 @@ Considering python3 and pip is already installed, we should use these bellow ste
 
 ### API End-Points:
  - Get all employees ` GET : /employee/ `
- - Get employee ` GET : /employee/<id> `
+ - Get employee ` GET : /employee/<id>/ `
  - Add employee ` POST : /employee/ `
- - Delete employee ` DELETE : /employee/<id> `
- - Update employee ` PUT : /employee/<id> `
+ - Delete employee ` DELETE : /employee/<id>/ `
+ - Update employee ` PUT : /employee/<id>/ `
  - Get Access Token ` GET : /api/token/ `
  - Refresh Access Token ` GET : /api/token/refresh/ `
 
