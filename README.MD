@@ -39,7 +39,7 @@ Considering python3 and pip is already installed, we should use these bellow ste
 
 ### Using API with curl:
 For Delete and PUT methods you should have a token.<br>
- - department tags `E: E-commerce`, `M : Mobile`, `A: Architeture`.
+ - department tags `"E" for E-commerce`, `"M" for Mobile` and `"A" for Architeture`.
 
  - getting a token : 
     - `curl -X POST -d "username=<username>&password=<password>" http://localhost:8000/api/token/`
